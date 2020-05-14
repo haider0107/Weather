@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@drawable/bg_gradient">
+
+
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#3CF1EBF1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"
+                android:text="Bangalore"
+                android:textSize="30dp"
+                />
+            <TextView
+                android:id="@+id/updated_at"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="20 April 2012, 20:08 PM"/>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:id="@+id/recyclerView" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <LinearLayout
+                    android:background="#3CF1EBF1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Max Temperature"
+                        android:textSize="18dp"
+                        android:textColor="#FFFFFF"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24°C"
+                        android:textSize="14dp"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:background="#3CF1EBF1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Min Temperature"
+                        android:textSize="18dp"
+                        android:textColor="#FFFFFF"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24°C"
+                        android:textSize="14dp"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:layout_weight="1"
+                    android:gravity="center" android:padding="10dp"
+                    android:background="#3CF1EBF1">
+                    <ImageView android:layout_width="25dp" android:layout_height="25dp"
+                        android:src="@drawable/wind" android:tint="#FFFFFF"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="15dp" android:text="Wind"
+                    android:textColor="#FFFFFF"/>
+                    <TextView android:id="@+id/wind" android:layout_width="wrap_content"
+                        android:textColor="#FFFFFF" android:layout_height="wrap_content" android:textSize="14dp"
+                        android:text="06:40 AM"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:layout_weight="1"
+                    android:gravity="center" android:padding="10dp"
+                    android:background="#3CF1EBF1">
+                    <ImageView android:layout_width="25dp" android:layout_height="25dp"
+                        android:src="@drawable/pressure" android:tint="#FFFFFF"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="15dp" android:textColor="#FFFFFF" android:text="Pressure"/>
+                    <TextView android:id="@+id/pressure" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="14dp"
+                        android:text="06:40 AM" android:textColor="#FFFFFF"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:layout_weight="1"
+                    android:gravity="center" android:padding="10dp"
+                    android:background="#3CF1EBF1">
+                    <ImageView android:layout_width="25dp" android:layout_height="25dp"
+                        android:src="@drawable/humidity" android:tint="#FFFFFF"/>
+                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="15dp" android:text="Humidity"
+                        android:textColor="#FFFFFF"/>
+                    <TextView android:id="@+id/humidity" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="14dp"
+                        android:text="06:40 AM"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
